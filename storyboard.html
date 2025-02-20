@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storyboard - Pizza Man</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .storyboard-section {
+            margin-bottom: 2rem;
+        }
+        .storyboard-section img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+        }
+        .storyboard-section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .storyboard-section p {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+
+    <div class="container mx-auto bg-white p-6 rounded-lg shadow-lg mt-16">
+        <h1 class="text-3xl font-bold mb-6">Storyboard - Pizza Man Website</h1>
+
+        <!-- Home Page -->
+        <div class="storyboard-section">
+            <h2>Home Page</h2>
+            <p>The home page includes a navbar, hero section, specialties section, carousel, why choose us section, customer reviews section, and locations section.</p>
+            <img src="https://via.placeholder.com/800x600?text=Home+Page" alt="Home Page">
+        </div>
+
+        <!-- Menu Page -->
+        <div class="storyboard-section">
+            <h2>Menu Page</h2>
+            <p>The menu page displays a grid of menu items with images, descriptions, prices, and buttons to add to cart or order now.</p>
+            <img src="https://via.placeholder.com/800x600?text=Menu+Page" alt="Menu Page">
+        </div>
+
+        <!-- About Us Page -->
+        <div class="storyboard-section">
+            <h2>About Us Page</h2>
+            <p>The about us page includes sections for the company's history, vision, mission, and achievements.</p>
+            <img src="https://via.placeholder.com/800x600?text=About+Us+Page" alt="About Us Page">
+        </div>
+
+        <!-- Order Page -->
+        <div class="storyboard-section">
+            <h2>Order Page</h2>
+            <p>The order page contains a form for placing an order with fields for name, address, phone, and order details.</p>
+            <img src="https://via.placeholder.com/800x600?text=Order+Page" alt="Order Page">
+        </div>
+
+        <!-- Contact Page -->
+        <div class="storyboard-section">
+            <h2>Contact Page</h2>
+            <p>The contact page contains a form for sending a message with fields for name, email, and message.</p>
+            <img src="https://via.placeholder.com/800x600?text=Contact+Page" alt="Contact Page">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Load Navbar
+            $('#navbar').load('navbar.html', function() {
+                // Ensure the menu icon toggles the mobile navigation menu
+                document.querySelector('.menu-icon').addEventListener('click', function() {
+                    document.querySelector('.mobile-nav').classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products - Pizza Man</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            color: black;
+            padding: 15px;
+        }
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .menu-container {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background: #222;
+            color: white;
+            display: none;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* Ensure the menu is above other elements */
+        }
+        .menu-container.active {
+            display: block;
+        }
+        .menu-container ul {
+            list-style: none;
+            text-align: center;
+        }
+        .menu-container ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #444;
+        }
+        .menu-container ul li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 0.25rem;
+            padding: 0.25rem 0.5rem;
+        }
+        .search-input {
+            border: none;
+            outline: none;
+            padding: 0.25rem;
+            font-size: 1rem;
+        }
+        .search-icon {
+            color: #333;
+            margin-right: 0.5rem;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="font-serif">
+    <nav class="navbar">
+        <div class="logo">Pizza Man</div>
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search-input" placeholder="Search...">
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="text-black hover:underline mr-4">Home</a>
+            <a href="about.html" class="text-black hover:underline mr-4">About Us</a>
+            <a href="menu.html" class="text-black hover:underline mr-4">Menu</a>
+            <a href="order.html" class="text-black hover:underline mr-4">Order Now</a>
+            <a href="contact.html" class="text-black hover:underline">Contact</a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <div class="menu-container" id="menuContainer">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order Now</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="container mx-auto p-4 mt-20">
+        <h1 class="text-3xl font-bold mb-4">Our Products</h1>
+        <p class="mb-4">We offer a variety of pizzas to satisfy all tastes.</p>
+        <nav class="mb-4">
+            <a href="index.html" class="text-blue-500 hover:underline mr-4">Home</a>
+            <a href="about.html" class="text-blue-500 hover:underline mr-4">About Us</a>
+            <a href="contact.html" class="text-blue-500 hover:underline mr-4">Contact</a>
+            <a href="recommendations.html" class="text-blue-500 hover:underline">Recommendations</a>
+        </nav>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menuContainer = document.getElementById("menuContainer");
+            menuContainer.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

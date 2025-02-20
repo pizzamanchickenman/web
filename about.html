@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - Pizza Man</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .header-background {
+            background-image: url('images/hero1.webp');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .nav-links.active {
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            .nav-links a {
+                display: block;
+                padding: 1rem;
+                border-bottom: 1px solid #e2e8f0;
+            }
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            color: black;
+            padding: 15px;
+        }
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .menu-container {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background: #222;
+            color: white;
+            display: none;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* Ensure the menu is above other elements */
+        }
+        .menu-container.active {
+            display: block;
+        }
+        .menu-container ul {
+            list-style: none;
+            text-align: center;
+        }
+        .menu-container ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #444;
+        }
+        .menu-container ul li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 0.25rem;
+            padding: 0.25rem 0.5rem;
+        }
+        .search-input {
+            border: none;
+            outline: none;
+            padding: 0.25rem;
+            font-size: 1rem;
+        }
+        .search-icon {
+            color: #333;
+            margin-right: 0.5rem;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="font-serif">
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+
+    <div class="header-background">
+        <h1 class="text-5xl font-bold">About Us</h1>
+    </div>
+    <div class="container mx-auto p-4 mt-8">
+        <h1 class="text-3xl font-bold mb-4">About Us</h1>
+        <p class="mb-4">Pizza Man was established in 2020 with the mission to provide the best pizza in town. Our vision is to become the leading pizza delivery service in the region.</p>
+        
+        <!-- New Content -->
+        <h2 class="text-2xl font-bold mb-4">Brief History</h2>
+        <p class="mb-4">Pizzaman Chickenman is Ghana’s fastest-growing fast-food chain, specializing in pizzas, grilled chicken, rice dishes, and other fast-food meals. The brand started in 2018 in Kumasi and quickly expanded across Accra, Kumasi, and other cities. Known for its affordable pricing, large meal portions, and innovative menu, Pizzaman Chickenman has become a household name in Ghana. The company operates multiple branches and provides delivery services via platforms like Bolt Food and Glovo.</p>
+
+        <h2 class="text-2xl font-bold mb-4">Vision</h2>
+        <p class="mb-4">To become Ghana’s No.1 fast-food brand by offering high-quality, delicious meals at affordable prices with excellent customer service.</p>
+
+        <h2 class="text-2xl font-bold mb-4">Mission</h2>
+        <ul class="list-disc list-inside mb-4">
+            <li>To provide Ghanaians with accessible and tasty fast food.</li>
+            <li>To expand operations across Africa, making Pizzaman Chickenman an international franchise.</li>
+            <li>To improve food delivery services with an efficient digital ordering system.</li>
+        </ul>
+
+        <!-- Achievements Section -->
+        <h2 class="text-2xl font-bold mb-4">Achievements</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="p-4 bg-white shadow-md rounded-lg flex items-center space-x-4">
+                <i class="fas fa-store-alt fa-2x text-red-500"></i>
+                <div>
+                    <p class="font-semibold">Opened 20 branches across Ghana within 3 years.</p>
+                </div>
+            </div>
+            <div class="p-4 bg-white shadow-md rounded-lg flex items-center space-x-4">
+                <i class="fas fa-chart-line fa-2x text-red-500"></i>
+                <div>
+                    <p class="font-semibold">Recognized as the fastest-growing fast-food chain in Ghana.</p>
+                </div>
+            </div>
+            <div class="p-4 bg-white shadow-md rounded-lg flex items-center space-x-4">
+                <i class="fas fa-award fa-2x text-red-500"></i>
+                <div>
+                    <p class="font-semibold">Awarded Best Customer Service in the fast-food industry in 2021.</p>
+                </div>
+            </div>
+            <div class="p-4 bg-white shadow-md rounded-lg flex items-center space-x-4">
+                <i class="fas fa-handshake fa-2x text-red-500"></i>
+                <div>
+                    <p class="font-semibold">Partnered with major delivery platforms like Bolt Food and Glovo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Load Navbar
+            $('#navbar').load('navbar.html', function() {
+                // Ensure the menu icon toggles the mobile navigation menu
+                document.querySelector('.menu-icon').addEventListener('click', function() {
+                    document.querySelector('.mobile-nav').classList.toggle('active');
+                });
+            });
+
+            document.getElementById('search-input').addEventListener('input', function() {
+                var query = this.value.toLowerCase();
+                document.querySelectorAll('.container').forEach(function(container) {
+                    var text = container.textContent.toLowerCase();
+                    container.style.display = text.includes(query) ? '' : 'none';
+                });
+            });
+
+            document.querySelector('.menu-icon').addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

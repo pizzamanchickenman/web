@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Pizza Man</title>
+    
+    <!-- External Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Responsive Navigation */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .nav-links.active {
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            .nav-links a {
+                display: block;
+                padding: 1rem;
+                border-bottom: 1px solid #e2e8f0;
+            }
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn-add {
+            background-color:rgb(230, 55, 42);
+            color: white;
+        }
+        .btn-add:hover {
+            background-color: darkred;
+        }
+        .btn-order {
+            background-color: white;
+            color: red;
+            border: 2px solid rgb(230, 55, 42);
+        }
+        .btn-order:hover {
+            background-color: rgb(230, 55, 42);
+            color: white;
+        }
+        .btn i {
+            margin-right: 0.5rem;
+        }
+        .card img {
+            object-fit: cover;
+            height: 200px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-serif">
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-4 mt-20">
+        <h1 class="text-3xl font-bold mb-4">Our Menu</h1>
+        <p class="mb-4">Explore our delicious range of pizzas, sides, and beverages.</p>
+        <div id="menu-items" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Example Food Item -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden card">
+                <img src="images/beefbucket.png" alt="Beef Bucket" class="w-full h-60">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold">Beef Bucket</h2>
+                    <p class="text-gray-600">Delicious beef bucket with a variety of flavors.</p>
+                    <p class="text-lg font-semibold">GHC 12.99</p>
+                    <div class="flex space-x-2 mt-2">
+                        <button class="btn btn-add">
+                            <i class="fas fa-plus"></i>Add
+                        </button>
+                        <button class="btn btn-order">
+                            <i class="fas fa-shopping-cart"></i>Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="bg-white shadow-md rounded-lg overflow-hidden card">
+                <img src="images/chickenwings.jpg" alt="Beef Bucket" class="w-full h-60">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold">Chicken Wing</h2>
+                    <p class="text-gray-600">Crispy, flavorful, and perfectly seasoned for a delightful bite.</p>
+                    <p class="text-lg font-semibold">GHC 45.99</p>
+                    <div class="flex space-x-2 mt-2">
+                        <button class="btn btn-add">
+                            <i class="fas fa-plus"></i>Add
+                        </button>
+                        <button class="btn btn-order">
+                            <i class="fas fa-shopping-cart"></i>Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg overflow-hidden card">
+                <img src="images/drum8pieces.png" alt="Beef Bucket" class="w-full h-60">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold">Drum Pieces</h2>
+                    <p class="text-gray-600">Authentic drum pieces with rich, full-bodied flavor.</p>
+                    <p class="text-lg font-semibold">GHC 10.99</p>
+                    <div class="flex space-x-2 mt-2">
+                        <button class="btn btn-add">
+                            <i class="fas fa-plus"></i>Add
+                        </button>
+                        <button class="btn btn-order">
+                            <i class="fas fa-shopping-cart"></i>Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg overflow-hidden card">
+                <img src="images/friedRice.jpg" alt="Beef Bucket" class="w-full h-60">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold">Fried Rice</h2>
+                    <p class="text-gray-600">Tasty fried rice made with fresh ingredients and a blend of flavors.</p>
+                    <p class="text-lg font-semibold">GHC 8.99</p>
+                    <div class="flex space-x-2 mt-2">
+                    
+                        <button class="btn btn-add">
+                            <i class="fas fa-plus"></i>Add
+                        </button>
+                        <button class="btn btn-order">
+                            <i class="fas fa-shopping-cart"></i>Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg overflow-hidden card">
+                <img src="images/jollof-1_.jpg" alt="Beef Bucket" class="w-full h-60">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold">Jollof Rice</h2>
+                    <p class="text-gray-600">Deliciously spiced jollof rice cooked to perfection.</p>
+                    <p class="text-lg font-semibold">GHC 9.99</p>
+                    <div class="flex space-x-2 mt-2">
+                    
+                        <button class="btn btn-add">
+                            <i class="fas fa-plus"></i>Add
+                        </button>
+                        <button class="btn btn-order">
+                            <i class="fas fa-shopping-cart"></i>Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg overflow-hidden card">
+                <img src="images/pizza.jpg" alt="Beef Bucket" class="w-full h-60">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold">Pizza</h2>
+                    <p class="text-gray-600">Cheesy pizza with a variety of toppings to choose from.</p>
+                    <p class="text-lg font-semibold">GHC 15.99</p>
+                    <div class="flex space-x-2 mt-2">
+                    
+                        <button class="btn btn-add">
+                            <i class="fas fa-plus"></i>Add
+                        </button>
+                        <button class="btn btn-order">
+                            <i class="fas fa-shopping-cart"></i>Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg overflow-hidden card">
+                <img src="images/noodle-2.jpg" alt="Beef Bucket" class="w-full h-60">
+                <div class="p-4">
+                                    <h2 class="text-lg font-semibold">Noodles</h2>
+                <p class="text-gray-600">Savoury noodles with a delicious mix of vegetables and spices.</p>
+                <p class="text-lg font-semibold">GHC 7.99</p>
+                <div class="flex space-x-2 mt-2">
+
+                        <button class="btn btn-add">
+                            <i class="fas fa-plus"></i>Add
+                        </button>
+                        <button class="btn btn-order">
+                            <i class="fas fa-shopping-cart"></i>Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg overflow-hidden card">
+                <img src="images/friedrice-4_.jpg" alt="Beef Bucket" class="w-full h-60">
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold">Fried Rice</h2>
+                    <p class="text-gray-600">Tasty fried rice made with fresh ingredients and a blend of flavors.</p>
+                    <p class="text-lg font-semibold">GHC 8.99</p>
+                    <div class="flex space-x-2 mt-2">
+                    
+                        <button class="btn btn-add">
+                            <i class="fas fa-plus"></i>Add
+                        </button>
+                        <button class="btn btn-order">
+                            <i class="fas fa-shopping-cart"></i>Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-4 mt-10">
+        &copy; 2025 Pizza Man. All Rights Reserved.
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Load Navbar
+            $('#navbar').load('navbar.html', function() {
+                // Ensure the menu icon toggles the mobile navigation menu
+                document.querySelector('.menu-icon').addEventListener('click', function() {
+                    document.querySelector('.mobile-nav').classList.toggle('active');
+                });
+            });
+
+            $('#search-input').on('input', function() {
+                var query = $(this).val().toLowerCase();
+                $('#menu-items > div').each(function() {
+                    var text = $(this).text().toLowerCase();
+                    $(this).toggle(text.includes(query));
+                });
+            });
+        });
+    </script>
+</body>
+</html>
